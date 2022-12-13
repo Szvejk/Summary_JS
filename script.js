@@ -1,30 +1,41 @@
-// # Fotograf
-
-// ## Story
-
-// Na stronie głównej chciałbym wyświetlić galerię zdjęć w formie kafelek. Chciałbym żeby za każdym odswieżeniem strony pokazywały się inne zdjęcia. Chciałbym żeby po najechaniu na nie myszką pojawiła się na tle zdjęcia nazwa autora. Chciałbym aby na dole były przyciski prawo, lewo, które pozwalają na nawigowanie pomiędzy stronami w galerii
-
-// ## Podpowiedź
-
-// W celu przedstawienia rozwiązania klientowi zapoznaj się z API https://picsum.photos
-// Wykorzystaj grida
-
-// ## TODO
-// - [ ] strona główna z kafelkami
-// - [ ] losowanie zdjęć z API po załadowaniu strony
-// - [ ] pobieranie informacji dla zdjęcia
-// - [ ] obsługa przycisków na dole strony
+const photos = document.querySelector('.flex');
+const firstPhoto = document.querySelector('.gallery img1');
+// const secondPhoto = document.querySelector('.gallery img2');
+// const thirdPhoto = document.querySelector('.gallery img3');
+// const fourPhoto = document.querySelector('.gallery img4');
+// const fivePhoto = document.querySelector('.gallery img5');
+// const sixPhoto = document.querySelector('.gallery img6');
+// const sevenPhoto = document.querySelector('.gallery img7');
+// const eightPhoto = document.querySelector('.gallery img8');
+// const ninePhoto = document.querySelector('.gallery img9');
+// const tenPhoto = document.querySelector('.gallery img10');
+// const elevenPhoto = document.querySelector('.gallery img11');
+// const twelvePhoto = document.querySelector('.gallery img12');
 
 
-// window.onload = function () {
-//     var images = [
-//         'image/A.png',
-//         'image/B.png',
-//         'image/C.png',
-//         'image/D.png'
-//     ];
+async function getData() {
+    const response = await fetch("https://picsum.photos/200")
+    const data = await response.json()
+    return data
+}
+getData().then((foto) => {
+foto.forEach((elem) => {
+    window.onload = function () {
+    let elem = document.createElement("img")
+    document.getElementById("gallery img1").appendChild(elem);
+}}
+)})
+
+
+// document.body.style.backgroundImage = 'url(' + images[Math.floor(Math.random()*images.length)] + ')';
+
+
+
+
+
 
 //     localStorage['backgroundIndex'] = !localStorage['backgroundIndex']?0:+localStorage['backgroundIndex']+2>images.length?0:+localStorage['backgroundIndex']+1;
 
-//     document.body.style.backgroundImage =  'url(' + images[+localStorage['backgroundIndex']] + ')';
-// }
+
+
+
