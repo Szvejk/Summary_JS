@@ -22,12 +22,12 @@ getData().then((foto) => {
 foto.forEach((elem) => {
     window.onload = function () {
     let elem = document.createElement("img")
-    document.getElementById("gallery img1").appendChild(elem);
+    document.getElementsByClassName("gallery img1").appendChild(elem);
 }}
 )})
 
 
-// document.body.style.backgroundImage = 'url(' + images[Math.floor(Math.random()*images.length)] + ')';
+
 
 
 
