@@ -32,9 +32,7 @@ body {
 				background-size: cover;
 				background-position: center;
 				position: relative;
-				z-index: 10;
 
-				
 				&:hover{
 					filter: brightness(0.3);
 				}
@@ -42,11 +40,11 @@ body {
 					opacity: 1;
 					color: white;
 					transition: 0.5s ease;
+					filter: brightness(1);
 				}
 
 				.title {
 					opacity: 0;
-					z-index: 100;
 				}
 			}
 		}

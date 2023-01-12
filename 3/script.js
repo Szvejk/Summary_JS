@@ -37,6 +37,9 @@ imgContElm.addEventListener('mousemove', function(mouseEvent){
     xpos -=obj_left;
     ypos -=obj_top;
 
+
+    
+
     const imgWidth = imgElm.clientWidth;
     const imgHeight = imgElm.clientHeight;
     imgElm.style.top = -(((imgHeight - this.clientHeight)*ypos) / this.clientHeight) + 'px';
